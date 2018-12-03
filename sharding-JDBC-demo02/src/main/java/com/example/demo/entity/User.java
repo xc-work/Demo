@@ -12,8 +12,8 @@ import java.io.Serializable;
  * Created by Administrator on 2018/10/17.
  */
 @Entity
-@JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
-public class User implements Serializable{
+@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
+public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

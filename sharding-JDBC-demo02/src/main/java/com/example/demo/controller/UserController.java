@@ -20,8 +20,8 @@ public class UserController {
 
 
     // 添加一个用户
-    @PostMapping(value="user")
-    public User userAdd(@RequestParam("name") String name, @RequestParam("gender")String gender){
+    @PostMapping(value = "user")
+    public User userAdd(@RequestParam("name") String name, @RequestParam("gender") String gender) {
         User user = new User();
         user.setName(name);
         user.setGender(gender);
@@ -29,15 +29,15 @@ public class UserController {
     }
 
     // 查询一个用户
-    @GetMapping(value="/user/{id}")
-    public User userFineOne(@PathVariable("id") Integer id){
+    @GetMapping(value = "/user/{id}")
+    public User userFineOne(@PathVariable("id") Integer id) {
         return userRepository.getOne(id);
     }
 
     // 更新一个用户
-    @PutMapping(value="/user/{id}")
+    @PutMapping(value = "/user/{id}")
     public User userUpdate(@PathVariable("id") Integer id,
-                           @RequestParam("name") String name,@RequestParam("gender")String gender){
+                           @RequestParam("name") String name, @RequestParam("gender") String gender) {
         User user = new User();
         user.setId(id);
         user.setName(name);
@@ -46,14 +46,14 @@ public class UserController {
     }
 
     // 删除一个用户
-    @DeleteMapping(value="/user/{id}")
-    public void userUpdate(@PathVariable("id") Integer id){
+    @DeleteMapping(value = "/user/{id}")
+    public void userUpdate(@PathVariable("id") Integer id) {
         userRepository.delete(id);
     }
 
     //保存用户后立刻查询用户
     @GetMapping("/userSaveAndRead/{name}/{gender}")
-    public User userSaveAndRead(@PathVariable String name,@PathVariable String gender) {
+    public User userSaveAndRead(@PathVariable String name, @PathVariable String gender) {
         User user = new User();
         user.setName(name);
         user.setGender(gender);
