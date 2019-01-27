@@ -1,6 +1,6 @@
-package com.example.japtxdemo.repository;
+package com.example.jpatxdemo.repository;
 
-import com.example.japtxdemo.entity.User;
+import com.example.jpatxdemo.entity.User;
 import org.springframework.data.repository.CrudRepository;
 
 /**

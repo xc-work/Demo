@@ -1,4 +1,4 @@
-package com.example.japtxdemo;
+package com.example.jpatxdemo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,7 +1,7 @@
-package com.example.japtxdemo.service;
+package com.example.jpatxdemo.service;
 
-import com.example.japtxdemo.entity.User;
-import com.example.japtxdemo.repository.UserRepository;
+import com.example.jpatxdemo.entity.User;
+import com.example.jpatxdemo.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
