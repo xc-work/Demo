@@ -1,5 +1,6 @@
-package com.example.jpalockdemo.service;
+package com.example.jpatxdemo.service;
 
+import com.example.jpatxdemo.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ public class UserServiceTest {
 
     @Test
     public void insertForTx3() throws Exception {
+        userService.insertForTx3();
     }
 
 }
