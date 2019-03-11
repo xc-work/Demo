@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
+import java.util.List;
+
 
 /**
  * Created by lixinchao on 18-12-2
@@ -28,6 +30,15 @@ public class UserService {
         User user = userRepository.findUserByName("tom");
         user.setAge(user.getAge() + 1);
         userRepository.save(user);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public void addMore() {
+        List<User> users = userRepository.findUserByGender("male");
+        for (User user:users){
+            user.setAge(user.getAge() + 1);
+            userRepository.save(user);
+        }
     }
 
 }

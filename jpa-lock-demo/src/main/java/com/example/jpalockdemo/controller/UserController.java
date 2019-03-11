@@ -39,6 +39,7 @@ public class UserController {
     @GetMapping(value = "/userAdd")
     public void add(){
         System.out.println(i.addAndGet(1));
-        userService.add();
+//        userService.add();
+        userService.addMore();
     }
 }
