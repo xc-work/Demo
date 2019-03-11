@@ -18,7 +18,7 @@ public class NodeController {
     private NodeService nodeService;
     private AtomicInteger i = new AtomicInteger(0);
 
-    @GetMapping(value = "/test")
+    @GetMapping(value = "/nodeAdd")
     public String test() throws InterruptedException {
         boolean flag = false;
         while (!flag){

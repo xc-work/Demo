@@ -18,7 +18,16 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
  */
 @Slf4j
 @Service
-public class UserService  {
+public class UserService {
 
+    @Autowired
+    private UserRepository userRepository;
+
+    @Transactional(rollbackFor = Exception.class)
+    public void add() {
+        User user = userRepository.findUserByName("tom");
+        user.setAge(user.getAge() + 1);
+        userRepository.save(user);
+    }
 
 }

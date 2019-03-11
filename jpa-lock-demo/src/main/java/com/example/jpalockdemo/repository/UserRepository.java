@@ -1,8 +1,11 @@
 package com.example.jpalockdemo.repository;
 
 import com.example.jpalockdemo.entity.User;
+import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+
+import javax.persistence.LockModeType;
 
 /**
  * Created by lixinchao on 18-12-2
@@ -10,5 +13,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends CrudRepository<User,Long> {
+
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
     User findUserByName(String name);
 }
