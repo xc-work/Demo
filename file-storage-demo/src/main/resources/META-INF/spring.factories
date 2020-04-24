@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.demo.file.storage.config.oss.OssAutoConfiguration,\
+  com.demo.file.storage.config.fastdfs.FastdfsAutoConfiguration
